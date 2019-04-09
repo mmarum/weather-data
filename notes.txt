@@ -23,3 +23,10 @@ Example:
 Bayonne, NJ
 lat=40.669079, lon=-74.117180
 
+Basics:
+r = requests.get('https://api.darksky.net/forecast/45d226bdc214d623a167eb061edf85c0/40.669079,-74.117180')
+#r.statuc_code
+x = r.json()
+current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(x['currently']['time']))
+print(current_time)
+#2019-04-09 15:59:38
